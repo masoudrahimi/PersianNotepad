@@ -143,6 +143,16 @@ namespace PersianNotepad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap noun_date_1431145 {
+            get {
+                object obj = ResourceManager.GetObject("noun-date-1431145", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap noun_error_log_1437741 {
             get {
                 object obj = ResourceManager.GetObject("noun-error-log-1437741", resourceCulture);

@@ -102,6 +102,7 @@
     <Content Include="579703.ico" />
     <Content Include="Icon-notepad.svg.ico" />
     <Content Include="Icon-Notpad.ico" />
+    <None Include="Resources\noun-date-1431145.png" />
     <None Include="Resources\noun-error-log-2984982.png" />
     <None Include="Resources\noun-error-log-1437741.png" />
     <None Include="Resources\contract.png" />
