@@ -1,0 +1,11 @@
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\PersianNotepad\bin\Debug\PersianNotepad.exe.config
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\PersianNotepad\bin\Debug\PersianNotepad.exe
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\PersianNotepad\bin\Debug\PersianNotepad.pdb
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.csproj.AssemblyReference.cache
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.csproj.SuggestedBindingRedirects.cache
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.Form1.resources
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.Properties.Resources.resources
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.csproj.GenerateResource.cache
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.csproj.CoreCompileInputs.cache
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.exe
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.pdb
