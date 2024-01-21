@@ -2,6 +2,7 @@
 using System.IO;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace PersianNotepad
@@ -178,6 +179,83 @@ namespace PersianNotepad
             this.panel2.AutoSize = true;
             toolBox.Visible = !toolBox.Visible;
             mnuBtnViewToolBox.Checked = !mnuBtnViewToolBox.Checked;
+        }
+
+        private void mnuBtnCopy_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(richText.SelectedText))
+            {
+                Clipboard.SetText(richText.SelectedText);
+            }
+            else if (!string.IsNullOrEmpty(richText.Text))
+            {
+                Clipboard.SetText(richText.Text);
+            }
+        }
+
+        private void mnuBtnPaste_Click(object sender, EventArgs e)
+        {
+            if (Clipboard.ContainsText())
+            {
+                if (!string.IsNullOrEmpty(richText.SelectedText))
+                {
+                    richText.SelectedText = Clipboard.GetText(TextDataFormat.UnicodeText); ;
+                }
+                else
+                {
+                    richText.Text += Clipboard.GetText(TextDataFormat.UnicodeText);
+                }
+
+                
+            }
+        }
+
+        private void mnuBtnClear_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(richText.SelectedText))
+            {
+                richText.SelectedText = "";
+            }
+            else
+            {
+                richText.Text = "";
+            }
+            
+        }
+
+        private void mnuBtnCut_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(richText.SelectedText))
+            {
+                Clipboard.SetText(richText.SelectedText);
+                richText.SelectedText = "";
+            }
+            else if(!string.IsNullOrEmpty(richText.Text))
+            {
+                Clipboard.SetText(richText.Text);
+                richText.Text = "";
+            }
+        }
+
+        private void mnuBtnSelectAll_Click(object sender, EventArgs e)
+        {
+            richText.SelectAll();
+        }
+
+        private void mnuBtnInsertDate_Click(object sender, EventArgs e)
+        {
+            PersianCalendar persianCalendar = new PersianCalendar();
+
+            if (!string.IsNullOrEmpty(richText.SelectedText))
+            {
+                richText.SelectedText =
+                    $"{persianCalendar.GetYear(DateTime.Now)}/{persianCalendar.GetMonth(DateTime.Now)}/{persianCalendar.GetDayOfMonth(DateTime.Now)}"; ;
+            }
+            else
+            {
+                richText.Text +=
+                    $@"{persianCalendar.GetYear(DateTime.Now)}/{persianCalendar.GetMonth(DateTime.Now)}/{persianCalendar.GetDayOfMonth(DateTime.Now)}";
+            }
         }
     }
 }
