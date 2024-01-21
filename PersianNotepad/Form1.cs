@@ -28,7 +28,7 @@ namespace PersianNotepad
             }
         }
 
-        private void btnNewDocument_Click(object sender, EventArgs e)
+        private void mnuBtnNewDocument_Click(object sender, EventArgs e)
         {
             if (richText.Text == "")
                 _documentIsChanged = false;
@@ -72,6 +72,22 @@ namespace PersianNotepad
         private void richText_TextChanged(object sender, EventArgs e)
         {
             _documentIsChanged = true;
+        }
+
+        private void mnuBtnOpenDocument_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult =  openFileDialog.ShowDialog();
+
+            if (dialogResult == DialogResult.OK)
+            {
+                string txtStreamReader = "";
+                using (StreamReader streamReader = new StreamReader(openFileDialog.FileName))
+                {
+                    txtStreamReader = streamReader.ReadToEnd();
+                }
+
+                richText.Text = txtStreamReader;
+            }
         }
     }
 }
