@@ -55,8 +55,8 @@
             this.mnuBtnOpenDocument = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBtnNewWindow = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.ذخیرهToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ذخیرهدرToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBtnSaveDocument = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBtnSaveAsDocument = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.چاپToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -297,8 +297,8 @@
             this.mnuBtnOpenDocument,
             this.mnuBtnNewWindow,
             this.toolStripSeparator1,
-            this.ذخیرهToolStripMenuItem,
-            this.ذخیرهدرToolStripMenuItem,
+            this.mnuBtnSaveDocument,
+            this.mnuBtnSaveAsDocument,
             this.toolStripSeparator2,
             this.چاپToolStripMenuItem,
             this.toolStripSeparator3,
@@ -340,22 +340,24 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(197, 6);
             // 
-            // ذخیرهToolStripMenuItem
+            // mnuBtnSaveDocument
             // 
-            this.ذخیرهToolStripMenuItem.Image = global::PersianNotepad.Properties.Resources.floppy_disk;
-            this.ذخیرهToolStripMenuItem.Name = "ذخیرهToolStripMenuItem";
-            this.ذخیرهToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.ذخیرهToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.ذخیرهToolStripMenuItem.Text = "ذخیره";
+            this.mnuBtnSaveDocument.Image = global::PersianNotepad.Properties.Resources.floppy_disk;
+            this.mnuBtnSaveDocument.Name = "mnuBtnSaveDocument";
+            this.mnuBtnSaveDocument.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
+            this.mnuBtnSaveDocument.Size = new System.Drawing.Size(200, 22);
+            this.mnuBtnSaveDocument.Text = "ذخیره";
+            this.mnuBtnSaveDocument.Click += new System.EventHandler(this.mnuBtnSaveDocument_Click);
             // 
-            // ذخیرهدرToolStripMenuItem
+            // mnuBtnSaveAsDocument
             // 
-            this.ذخیرهدرToolStripMenuItem.Image = global::PersianNotepad.Properties.Resources.save_as;
-            this.ذخیرهدرToolStripMenuItem.Name = "ذخیرهدرToolStripMenuItem";
-            this.ذخیرهدرToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            this.mnuBtnSaveAsDocument.Image = global::PersianNotepad.Properties.Resources.save_as;
+            this.mnuBtnSaveAsDocument.Name = "mnuBtnSaveAsDocument";
+            this.mnuBtnSaveAsDocument.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.S)));
-            this.ذخیرهدرToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.ذخیرهدرToolStripMenuItem.Text = "ذخیره در";
+            this.mnuBtnSaveAsDocument.Size = new System.Drawing.Size(200, 22);
+            this.mnuBtnSaveAsDocument.Text = "ذخیره در";
+            this.mnuBtnSaveAsDocument.Click += new System.EventHandler(this.mnuBtnSaveAsDocument_Click);
             // 
             // toolStripSeparator2
             // 
@@ -556,7 +558,6 @@
             // 
             // openFileDialog
             // 
-            this.openFileDialog.FileName = "openFileDialog1";
             this.openFileDialog.Filter = "txt files(*.txt)|*.txt|All files(*.*)|*.*";
             this.openFileDialog.Title = "باز کردن سند دفترچه یادداشت فارسی";
             // 
@@ -607,8 +608,8 @@
         private System.Windows.Forms.ToolStripMenuItem mnuBtnOpenDocument;
         private System.Windows.Forms.ToolStripMenuItem mnuBtnNewWindow;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem ذخیرهToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ذخیرهدرToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuBtnSaveDocument;
+        private System.Windows.Forms.ToolStripMenuItem mnuBtnSaveAsDocument;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem چاپToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
