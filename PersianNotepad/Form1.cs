@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace PersianNotepad
@@ -88,6 +82,11 @@ namespace PersianNotepad
 
                 richText.Text = txtStreamReader;
             }
+        }
+
+        private void mnuBtnNewWindow_Click(object sender, EventArgs e)
+        {
+            Process.Start(Process.GetCurrentProcess().ProcessName);
         }
     }
 }
