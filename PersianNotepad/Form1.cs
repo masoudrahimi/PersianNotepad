@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Diagnostics;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace PersianNotepad
@@ -13,6 +14,7 @@ namespace PersianNotepad
         public Form1()
         {
             InitializeComponent();
+            richText.Font = fontDialog.Font;
         }
 
         private void SaveDocument()
@@ -24,9 +26,9 @@ namespace PersianNotepad
                 if (dialogResultSave == DialogResult.OK)
                 {
                     WriteDocument(saveFileDialog.FileName);
+                    _pathSaved = saveFileDialog.FileName;
                     _documentIsChanged = false;
                 }
-                _pathSaved = saveFileDialog.FileName;
             }
             else
             {
@@ -131,6 +133,51 @@ namespace PersianNotepad
         private void mnuBtnSaveAsDocument_Click(object sender, EventArgs e)
         {
             SaveAsDocument();
+        }
+
+        private void mnuBtnViewFonts_Click(object sender, EventArgs e)
+        {
+            fontDialog.ShowDialog();
+            richText.Font = fontDialog.Font;
+        }
+
+        private void mnuBtnExitDocument_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (_documentIsChanged)
+            {
+                DialogResult dialogResult = RtlMessageBox.Show("آیا میخواهید تغییرات ایجاد شده را ذخیره نمایید؟",
+                    "ذخیره سند", MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    SaveDocument();
+                }
+                else if (dialogResult == DialogResult.Cancel)
+                {
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private void mnuBtnViewStatusBar_Click(object sender, EventArgs e)
+        {
+            this.panel3.AutoSize = true;
+            this.panel4.AutoSize = true;
+            statusBar.Visible = !statusBar.Visible;
+            mnuBtnViewStatusBar.Checked = !mnuBtnViewStatusBar.Checked;
+        }
+
+        private void mnuBtnViewToolBox_Click(object sender, EventArgs e)
+        {
+            this.panel2.AutoSize = true;
+            toolBox.Visible = !toolBox.Visible;
+            mnuBtnViewToolBox.Checked = !mnuBtnViewToolBox.Checked;
         }
     }
 }

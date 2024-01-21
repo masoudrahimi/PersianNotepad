@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusBar = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -39,7 +39,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.richText = new System.Windows.Forms.RichTextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolBox = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
@@ -49,7 +49,7 @@
             this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripButton7 = new System.Windows.Forms.ToolStripButton();
             this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.فایلToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBtnNewDocument = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuBtnOpenDocument = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,7 +60,7 @@
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.چاپToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.خروجToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBtnExitDocument = new System.Windows.Forms.ToolStripMenuItem();
             this.ویرایشToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.واگردToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.کپیToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -73,23 +73,24 @@
             this.انتخابهمهToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.درجتاریخToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.قالببندیToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.فونتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBtnViewFonts = new System.Windows.Forms.ToolStripMenuItem();
             this.نماToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.نواروضعیتToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.جعبهابزارToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBtnViewStatusBar = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuBtnViewToolBox = new System.Windows.Forms.ToolStripMenuItem();
             this.راهنماToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.راهنمایبرنامهToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.گزارشخطاToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.دربارهماToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.fontDialog = new System.Windows.Forms.FontDialog();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.statusBar.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
+            this.toolBox.SuspendLayout();
+            this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,26 +108,27 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.Window;
-            this.panel4.Controls.Add(this.statusStrip1);
+            this.panel4.Controls.Add(this.statusBar);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 539);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(784, 22);
             this.panel4.TabIndex = 2;
             // 
-            // statusStrip1
+            // statusBar
             // 
-            this.statusStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusBar.BackColor = System.Drawing.SystemColors.Control;
+            this.statusBar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statusBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3,
             this.toolStripStatusLabel4});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 0);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(784, 22);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
+            this.statusBar.Location = new System.Drawing.Point(0, 0);
+            this.statusBar.Name = "statusBar";
+            this.statusBar.Size = new System.Drawing.Size(784, 22);
+            this.statusBar.TabIndex = 0;
+            this.statusBar.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
@@ -175,19 +177,20 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.Control;
-            this.panel2.Controls.Add(this.toolStrip1);
-            this.panel2.Controls.Add(this.menuStrip1);
+            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.toolBox);
+            this.panel2.Controls.Add(this.menuStrip);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(784, 48);
             this.panel2.TabIndex = 0;
             // 
-            // toolStrip1
+            // toolBox
             // 
-            this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolBox.BackColor = System.Drawing.SystemColors.Control;
+            this.toolBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.toolBox.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
             this.toolStripButton2,
             this.toolStripButton3,
@@ -197,11 +200,11 @@
             this.toolStripSeparator6,
             this.toolStripButton7,
             this.toolStripComboBox1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(784, 24);
-            this.toolStrip1.TabIndex = 1;
-            this.toolStrip1.Text = "toolStrip1";
+            this.toolBox.Location = new System.Drawing.Point(0, 24);
+            this.toolBox.Name = "toolBox";
+            this.toolBox.Size = new System.Drawing.Size(784, 24);
+            this.toolBox.TabIndex = 1;
+            this.toolBox.Text = "toolStrip1";
             // 
             // toolStripButton1
             // 
@@ -276,19 +279,19 @@
             this.toolStripComboBox1.Name = "toolStripComboBox1";
             this.toolStripComboBox1.Size = new System.Drawing.Size(121, 24);
             // 
-            // menuStrip1
+            // menuStrip
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.فایلToolStripMenuItem,
             this.ویرایشToolStripMenuItem,
             this.قالببندیToolStripMenuItem,
             this.نماToolStripMenuItem,
             this.راهنماToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip.Name = "menuStrip";
+            this.menuStrip.Size = new System.Drawing.Size(784, 24);
+            this.menuStrip.TabIndex = 0;
+            this.menuStrip.Text = "menuStrip1";
             // 
             // فایلToolStripMenuItem
             // 
@@ -302,7 +305,7 @@
             this.toolStripSeparator2,
             this.چاپToolStripMenuItem,
             this.toolStripSeparator3,
-            this.خروجToolStripMenuItem});
+            this.mnuBtnExitDocument});
             this.فایلToolStripMenuItem.Name = "فایلToolStripMenuItem";
             this.فایلToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.فایلToolStripMenuItem.Text = "فایل";
@@ -377,13 +380,14 @@
             this.toolStripSeparator3.Name = "toolStripSeparator3";
             this.toolStripSeparator3.Size = new System.Drawing.Size(197, 6);
             // 
-            // خروجToolStripMenuItem
+            // mnuBtnExitDocument
             // 
-            this.خروجToolStripMenuItem.Image = global::PersianNotepad.Properties.Resources.exit;
-            this.خروجToolStripMenuItem.Name = "خروجToolStripMenuItem";
-            this.خروجToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F4;
-            this.خروجToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.خروجToolStripMenuItem.Text = "خروج";
+            this.mnuBtnExitDocument.Image = global::PersianNotepad.Properties.Resources.exit;
+            this.mnuBtnExitDocument.Name = "mnuBtnExitDocument";
+            this.mnuBtnExitDocument.ShortcutKeys = System.Windows.Forms.Keys.F4;
+            this.mnuBtnExitDocument.Size = new System.Drawing.Size(200, 22);
+            this.mnuBtnExitDocument.Text = "خروج";
+            this.mnuBtnExitDocument.Click += new System.EventHandler(this.mnuBtnExitDocument_Click);
             // 
             // ویرایشToolStripMenuItem
             // 
@@ -480,44 +484,47 @@
             // قالببندیToolStripMenuItem
             // 
             this.قالببندیToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.فونتToolStripMenuItem});
+            this.mnuBtnViewFonts});
             this.قالببندیToolStripMenuItem.Name = "قالببندیToolStripMenuItem";
             this.قالببندیToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
             this.قالببندیToolStripMenuItem.Text = "قالب بندی";
             // 
-            // فونتToolStripMenuItem
+            // mnuBtnViewFonts
             // 
-            this.فونتToolStripMenuItem.Image = global::PersianNotepad.Properties.Resources.font;
-            this.فونتToolStripMenuItem.Name = "فونتToolStripMenuItem";
-            this.فونتToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            this.mnuBtnViewFonts.Image = global::PersianNotepad.Properties.Resources.font;
+            this.mnuBtnViewFonts.Name = "mnuBtnViewFonts";
+            this.mnuBtnViewFonts.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
             | System.Windows.Forms.Keys.F)));
-            this.فونتToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
-            this.فونتToolStripMenuItem.Text = "فونت";
+            this.mnuBtnViewFonts.Size = new System.Drawing.Size(180, 22);
+            this.mnuBtnViewFonts.Text = "فونت";
+            this.mnuBtnViewFonts.Click += new System.EventHandler(this.mnuBtnViewFonts_Click);
             // 
             // نماToolStripMenuItem
             // 
             this.نماToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.نواروضعیتToolStripMenuItem,
-            this.جعبهابزارToolStripMenuItem});
+            this.mnuBtnViewToolBox,
+            this.mnuBtnViewStatusBar});
             this.نماToolStripMenuItem.Name = "نماToolStripMenuItem";
             this.نماToolStripMenuItem.Size = new System.Drawing.Size(33, 20);
             this.نماToolStripMenuItem.Text = "نما";
             // 
-            // نواروضعیتToolStripMenuItem
+            // mnuBtnViewStatusBar
             // 
-            this.نواروضعیتToolStripMenuItem.Checked = true;
-            this.نواروضعیتToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.نواروضعیتToolStripMenuItem.Name = "نواروضعیتToolStripMenuItem";
-            this.نواروضعیتToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.نواروضعیتToolStripMenuItem.Text = "نوار وضعیت";
+            this.mnuBtnViewStatusBar.Checked = true;
+            this.mnuBtnViewStatusBar.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.mnuBtnViewStatusBar.Name = "mnuBtnViewStatusBar";
+            this.mnuBtnViewStatusBar.Size = new System.Drawing.Size(180, 22);
+            this.mnuBtnViewStatusBar.Text = "نوار وضعیت";
+            this.mnuBtnViewStatusBar.Click += new System.EventHandler(this.mnuBtnViewStatusBar_Click);
             // 
-            // جعبهابزارToolStripMenuItem
+            // mnuBtnViewToolBox
             // 
-            this.جعبهابزارToolStripMenuItem.Checked = true;
-            this.جعبهابزارToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.جعبهابزارToolStripMenuItem.Name = "جعبهابزارToolStripMenuItem";
-            this.جعبهابزارToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
-            this.جعبهابزارToolStripMenuItem.Text = "جعبه ابزار";
+            this.mnuBtnViewToolBox.Checked = true;
+            this.mnuBtnViewToolBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.mnuBtnViewToolBox.Name = "mnuBtnViewToolBox";
+            this.mnuBtnViewToolBox.Size = new System.Drawing.Size(180, 22);
+            this.mnuBtnViewToolBox.Text = "جعبه ابزار";
+            this.mnuBtnViewToolBox.Click += new System.EventHandler(this.mnuBtnViewToolBox_Click);
             // 
             // راهنماToolStripMenuItem
             // 
@@ -561,6 +568,10 @@
             this.openFileDialog.Filter = "txt files(*.txt)|*.txt|All files(*.*)|*.*";
             this.openFileDialog.Title = "باز کردن سند دفترچه یادداشت فارسی";
             // 
+            // fontDialog
+            // 
+            this.fontDialog.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -569,24 +580,25 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
+            this.MainMenuStrip = this.menuStrip;
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.RightToLeftLayout = true;
             this.Text = "دفتر یادداشت";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.statusBar.ResumeLayout(false);
+            this.statusBar.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.toolBox.ResumeLayout(false);
+            this.toolBox.PerformLayout();
+            this.menuStrip.ResumeLayout(false);
+            this.menuStrip.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -595,13 +607,13 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip statusBar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStrip toolBox;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.MenuStrip menuStrip;
         private System.Windows.Forms.ToolStripMenuItem فایلToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnuBtnNewDocument;
         private System.Windows.Forms.RichTextBox richText;
@@ -613,7 +625,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem چاپToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
-        private System.Windows.Forms.ToolStripMenuItem خروجToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuBtnExitDocument;
         private System.Windows.Forms.ToolStripMenuItem ویرایشToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem واگردToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem کپیToolStripMenuItem;
@@ -626,10 +638,10 @@
         private System.Windows.Forms.ToolStripMenuItem انتخابهمهToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem درجتاریخToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem قالببندیToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem فونتToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuBtnViewFonts;
         private System.Windows.Forms.ToolStripMenuItem نماToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem نواروضعیتToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem جعبهابزارToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuBtnViewStatusBar;
+        private System.Windows.Forms.ToolStripMenuItem mnuBtnViewToolBox;
         private System.Windows.Forms.ToolStripMenuItem راهنماToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem راهنمایبرنامهToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem گزارشخطاToolStripMenuItem;
@@ -647,6 +659,7 @@
         private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog;
         private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.FontDialog fontDialog;
     }
 }
 
