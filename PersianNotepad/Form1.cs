@@ -257,5 +257,39 @@ namespace PersianNotepad
                     $@"{persianCalendar.GetYear(DateTime.Now)}/{persianCalendar.GetMonth(DateTime.Now)}/{persianCalendar.GetDayOfMonth(DateTime.Now)}";
             }
         }
+
+        private void mnuBtnPrintDocument_Click(object sender, EventArgs e)
+        {
+            printDialog.Document = printDocument;
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDocument.Print();
+            }
+        }
+
+        private void printDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            string strText = richText.Text;
+            int chars;
+            int lines;
+
+            SolidBrush b = new SolidBrush(Color.Black);
+            StringFormat strformat = new StringFormat();
+            strformat.Trimming = StringTrimming.Word;
+            RectangleF myRectangleF = new RectangleF(e.MarginBounds.Left,
+                e.MarginBounds.Top, e.MarginBounds.Width, e.MarginBounds.Height);
+            SizeF mySizeF = new SizeF(e.MarginBounds.Width, e.MarginBounds.Height - fontDialog.Font.GetHeight(e.Graphics));
+            e.Graphics.MeasureString(strText, fontDialog.Font, mySizeF, strformat, out chars, out lines);
+            string printstr = strText.Substring(0, chars);
+            e.Graphics.DrawString(printstr, fontDialog.Font, b, myRectangleF, strformat);
+            if (strText.Length > chars)
+            {
+                strText = strText.Substring(chars);
+                e.HasMorePages = true;
+            }
+            else
+                e.HasMorePages = false;
+
+        }
     }
 }
