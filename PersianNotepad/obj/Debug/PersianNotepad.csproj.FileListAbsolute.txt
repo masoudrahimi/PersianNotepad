@@ -21,3 +21,4 @@ C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\obj\Debug\P
 C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.exe
 C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.pdb
 C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.frmSearch.resources
+C:\Users\Masoud.NET\Desktop\MyProjects\PersianNotepad\PersianNotepad\obj\Debug\PersianNotepad.frmAboutUs.resources

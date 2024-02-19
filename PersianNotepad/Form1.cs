@@ -298,10 +298,24 @@ namespace PersianNotepad
             frmSearch.ShowDialog();
         }
 
-        private void جایگزینیToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuBtnReplace_Click(object sender, EventArgs e)
         {
             frmSearch frmSearch = new frmSearch(this);
             frmSearch.ShowDialog();
+        }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            var pc = new PersianCalendar();
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            lblDate.Text = $"{pc.GetYear(DateTime.Now)}/{pc.GetMonth(DateTime.Now)}/{pc.GetDayOfMonth(DateTime.Now)}";
+
+        }
+
+        private void mnuBtnAboutUs_Click(object sender, EventArgs e)
+        {
+            frmAboutUs frmAboutUs = new frmAboutUs();
+            frmAboutUs.ShowDialog();
         }
     }
 }
