@@ -291,5 +291,17 @@ namespace PersianNotepad
                 e.HasMorePages = false;
 
         }
+
+        private void mnuBtnSearch_Click(object sender, EventArgs e)
+        {
+            frmSearch frmSearch = new frmSearch(this);
+            frmSearch.ShowDialog();
+        }
+
+        private void جایگزینیToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSearch frmSearch = new frmSearch(this);
+            frmSearch.ShowDialog();
+        }
     }
 }
